@@ -1,0 +1,284 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+html {
+  font-size: 1.3333333333vw;
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #333333;
+}
+
+main {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+a,
+button {
+  text-decoration: none;
+  color: #0066C5;
+}
+a:hover,
+button:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.main_content {
+  margin-top: 5rem;
+}
+
+.header {
+  font-size: 4rem;
+  line-height: 1.2;
+  text-align: center;
+  padding: 1rem;
+  color: red;
+}
+
+.add_item {
+  display: inline-block;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  padding: 1rem 1rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  background-color: blue;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.list_item {
+  border: 1px solid gray;
+}
+
+.title {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: bold;
+  padding: 1rem;
+  color: #000;
+  background-color: rgb(241, 247, 233);
+}
+
+.table {
+  padding: 1rem;
+}
+.table table, .table th, .table td {
+  border: 1px solid gray;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+.table table {
+  width: 100%;
+}
+.table .action {
+  text-align: left;
+}
+.table .change {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background-color: rgb(127, 215, 237);
+  cursor: pointer;
+}
+.table .delete {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background-color: rgb(250, 78, 63);
+  cursor: pointer;
+}
+
+.h-pc {
+  display: none;
+}
+@media (min-width: 768px) {
+  .h-pc {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .h-sp {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .break-pc {
+    display: block;
+  }
+}
+
+@media (max-width: 968px) {
+  .break-sp {
+    display: block;
+  }
+}

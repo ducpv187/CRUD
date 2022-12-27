@@ -1,0 +1,85 @@
+// code layout CURD
+.main_content {
+  margin-top: 5rem;
+}
+.header {
+  font-size: 4rem;
+  line-height: 1.2;
+  text-align: center;
+  padding: 1rem;
+  color: red;
+}
+.add_item {
+  display: inline-block;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  padding: 1rem 1rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  background-color: blue;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.list_item {
+  border: 1px solid gray;
+
+}
+.title {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: bold;
+  padding: 1rem;
+  color: #000;
+  background-color: rgb(241, 247, 233);
+}
+.table {
+  padding: 1rem;
+  table, th, td {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+  table {
+    width: 100%;
+  }
+  .action {
+    text-align: left;
+  } 
+  .change {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background-color: rgb(127, 215, 237);
+    cursor: pointer;
+  }
+  .delete {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background-color: rgb(250, 78, 63);
+    cursor: pointer;
+  }
+}
+
+.h-pc {
+  display: none;
+  @media (min-width: 768px) {
+      display: block;
+  }
+}
+
+.h-sp {
+  @media (min-width: 768px) {
+      display: none;
+  }
+}
+
+.break-pc {
+  @media (min-width: 768px) {
+      display: block;
+  }
+}
+
+.break-sp {
+  @media (max-width: 968px) {
+      display: block;
+  }
+}
