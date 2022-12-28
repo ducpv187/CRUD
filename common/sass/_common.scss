@@ -5,24 +5,50 @@
 .header {
   font-size: 4rem;
   line-height: 1.2;
+  font-weight: bold;
   text-align: center;
   padding: 1rem;
+  text-decoration:underline;
   color: red;
 }
-.add_item {
-  display: inline-block;
+.add_item { 
   font-size: 2.2rem;
   line-height: 1.2;
   padding: 1rem 1rem;
   margin-bottom: 1.5rem;
-  color: white;
-  background-color: blue;
+  color: black;
+  background-color: white;
   border-radius: 0.5rem;
   cursor: pointer;
+  .fied {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    label {
+      width: 10rem;
+    }
+    input {
+      padding: 0.5rem;
+    }
+  }
+  &--btn {
+    font-size: 2rem;
+    line-height: 1.2;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    background-color: rgb(255, 204, 0);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
 }
 .list_item {
   border: 1px solid gray;
-
+  padding: 2rem 0;
+  margin-bottom: 2rem;
 }
 .title {
   font-size: 1.8rem;
@@ -45,13 +71,13 @@
   .action {
     text-align: left;
   } 
-  .change {
+  .js-change {
     padding: 0.5rem;
     font-size: 1.5rem;
     background-color: rgb(127, 215, 237);
     cursor: pointer;
   }
-  .delete {
+  .js-delete {
     padding: 0.5rem;
     font-size: 1.5rem;
     background-color: rgb(250, 78, 63);

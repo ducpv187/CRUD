@@ -199,25 +199,52 @@ ul {
 .header {
   font-size: 4rem;
   line-height: 1.2;
+  font-weight: bold;
   text-align: center;
   padding: 1rem;
+  text-decoration: underline;
   color: red;
 }
 
 .add_item {
-  display: inline-block;
   font-size: 2.2rem;
   line-height: 1.2;
   padding: 1rem 1rem;
   margin-bottom: 1.5rem;
-  color: white;
-  background-color: blue;
+  color: black;
+  background-color: white;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+.add_item .fied {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.add_item .fied label {
+  width: 10rem;
+}
+.add_item .fied input {
+  padding: 0.5rem;
+}
+.add_item--btn {
+  font-size: 2rem;
+  line-height: 1.2;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  background-color: rgb(255, 204, 0);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .list_item {
   border: 1px solid gray;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .title {
@@ -243,13 +270,13 @@ ul {
 .table .action {
   text-align: left;
 }
-.table .change {
+.table .js-change {
   padding: 0.5rem;
   font-size: 1.5rem;
   background-color: rgb(127, 215, 237);
   cursor: pointer;
 }
-.table .delete {
+.table .js-delete {
   padding: 0.5rem;
   font-size: 1.5rem;
   background-color: rgb(250, 78, 63);

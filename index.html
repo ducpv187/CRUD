@@ -1,77 +1,65 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" crossorigin as="font">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans:wght@300&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="common/css/main.css">
+    <title> CURD sample </title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" crossorigin as="font">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans:wght@300&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="common/css/main.css">
-  <title> CURD sample </title>
-</head>
-
-<body>
-  <main>
-    <section class="main">
-      <div class="container">
-        <div class="header">
-          CURD
-        </div>
-        <div class="main_content">
-          <div class="add_item">
-            Thêm sản phẩm
+  <body>
+    <main>
+      <section class="main">
+        <div class="container">
+          <div class="header">
+            CURD
           </div>
-          <div class="list_item">
-            <div class="title">
-              Dach sách sản phẩm 
+          <div class="main_content">
+            <div class="add_item">
+              <div class="form_value">
+                <div class="fied">
+                  <label for="">Ma Sp</label>
+                  <input type="text" name="qr" id="qr">
+                </div>
+                <div class="fied">
+                  <label for="">Ten</label>
+                  <input type="text" name="name" id="name">
+                </div>
+                <div class="fied">
+                  <label for="">Gia</label>
+                  <input type="number" name="price" id="price">
+                </div>
+              </div>
+              <button class="add_item--btn js-add">Add</button>
             </div>
-            <div class="table">
-              <table>
-                <tr>
-                  <th>STT</th>
-                  <th>Mã Sp</th>
-                  <th>Tên</th>
-                  <th>Giá</th>
-                  <th>Hành động</th>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>VN01</td>
-                  <td>Iphone</td>
-                  <td>500</td>
-                  <td class="action">
-                    <span class="change">Sửa</span>
-                    <span class="delete">Xóa</span>
-                  </td>                  
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>VN02</td>
-                  <td>Sam Sung</td>
-                  <td>600</td>
-                  <td class="action">
-                    <span class="change">Sửa</span>
-                    <span class="delete">Xóa</span>
-                  </td>                   
-                </tr>
-                <tr>
-                  <td>3</td>                  
-                  <td>VN03</td>
-                  <td>Opppo</td>
-                  <td>700</td>
-                  <td class="action">
-                    <span class="change">Sửa</span>
-                    <span class="delete">Xóa</span>
-                  </td>    
-                </tr>            
-              </table>
+            <div class="list_item">
+              <div class="title">
+                Dach sách sản phẩm 
+              </div>
+              <div class="table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>Mã Sp</th>
+                      <th>Tên</th>
+                      <th>Giá</th>
+                      <th>Hành động</th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbody">                  
+                  </tbody>        
+                </table>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>   
-  </main>
-</body>
-
+      </section>   
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./common/js/main.js"></script>
+  </body> 
 </html>
