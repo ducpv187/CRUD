@@ -30,12 +30,14 @@ $(document).ready(function() {
   // Delete value
   $(document).on('click','.js-delete',function(){
     let idDelete= $(this).attr('id');  
-    console.log(idDelete);
+    let $this = $(this);  
+    // console.log(idDelete);
     $.ajax({
       url: `https://63a56082318b23efa791bf88.mockapi.io/api/crud/${idDelete}`,
       type: 'DELETE',
       success: function(data) {        
-        window.location.reload();     
+        // window.location.reload();     
+        $this.parents().remove('tr');
       }
     });
   });
@@ -100,11 +102,6 @@ $(document).ready(function() {
       }
     });
    });
-
-
-
-
-
 
   //Call data Api 
   $.ajax({
