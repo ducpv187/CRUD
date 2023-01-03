@@ -42,9 +42,6 @@ $(document).ready(function() {
 
   // Edit value
   $(document).on('click','.js-change',function(){
-    let valueQr = $("#qr").val();
-    let valueName = $("#name").val(); 
-    let valuePrice = $("#price").val(); 
     let idChange = $(this).attr('id');
     // console.log(idChange,"change");
 
@@ -80,20 +77,30 @@ $(document).ready(function() {
           });  
         }
     });
+  });
 
+  $(document).on('click','.js-add',function(){ 
+    let QrChange = $("#qr").val();
+    let NameChange = $("#name").val(); 
+    let PriceChange = $("#price").val(); 
+    let idBtnChange= $(this).parents(".main_content").find(".list_item .js-change").attr('id'); 
+    // console.log(QrChange);
+    // console.log(idBtnChange);
     $.ajax({
-      type: "POST",
-      url: `https://63a56082318b23efa791bf88.mockapi.io/api/crud/${idChange}`,
+      type: "PUT",
+      url: `https://63a56082318b23efa791bf88.mockapi.io/api/crud/${idBtnChange}`,
       data: {
-        qr: valueQr,
-        name: valueName,
-        price: valuePrice
+        qr:  QrChange,
+        name: NameChange,
+        price: PriceChange
       },
       success: function (data){   
-        console.log(valueQr);                    
+        window.location.reload();                    
       }
     });
-  });
+   });
+
+
 
 
 
@@ -104,7 +111,7 @@ $(document).ready(function() {
     url: "https://63a56082318b23efa791bf88.mockapi.io/api/crud",
     success: function(data){
       renderData(data);
-      console.log(data);      
+      // console.log(data);      
     }
   });
   //Render Data in web
