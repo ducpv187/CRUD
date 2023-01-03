@@ -69,7 +69,8 @@ $(document).ready(function() {
                   <input type="number" name="price" id="price"  value="${value.price}">
                 </div>
               </div>
-              <button class="add_item--btn js-add">Add</button>
+              <input type="hidden" name="id" id=""  value="${idChange}" class="input__hidden">
+              <button class="add_item--btn js-update">Add</button>
               `;  
               $(".form_value").empty();                      
               $(".form_value").append(valueInput);            
@@ -79,13 +80,13 @@ $(document).ready(function() {
     });
   });
 
-  $(document).on('click','.js-add',function(){ 
+  $(document).on('click','.js-update',function(){ 
     let QrChange = $("#qr").val();
     let NameChange = $("#name").val(); 
     let PriceChange = $("#price").val(); 
-    let idBtnChange= $(this).parents(".main_content").find(".list_item .js-change").attr('id'); 
+    let idBtnChange = $(this).parents().find(".input__hidden").val(); 
     // console.log(QrChange);
-    // console.log(idBtnChange);
+    console.log(idBtnChange);
     $.ajax({
       type: "PUT",
       url: `https://63a56082318b23efa791bf88.mockapi.io/api/crud/${idBtnChange}`,
