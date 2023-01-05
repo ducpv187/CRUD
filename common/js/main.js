@@ -37,7 +37,7 @@ $(document).ready(function() {
       type: 'DELETE',
       success: function(data) {        
         // window.location.reload();     
-        $this.parents().remove('tr');
+        $this.parents('tr').remove();
       }
     });
   });
@@ -46,7 +46,6 @@ $(document).ready(function() {
   $(document).on('click','.js-change',function(){
     let idChange = $(this).attr('id');
     // console.log(idChange,"change");
-
     // render data vào lại ô input nhập
     $.ajax({
       type: "GET",
@@ -127,6 +126,30 @@ $(document).ready(function() {
         </td>                  
       </tr>`;  
       $(".table .tbody").append(dataShow);
-    });    
-  }
-});
+    }); 
+    // pagination
+    $('#data').after ('<div id="nav"></div>');  
+      var rowsShown = 5;  
+      var rowsTotal = $('#data tbody tr').length;  
+      console.log(rowsTotal)
+      var numPages = rowsTotal/rowsShown;  
+      console.log(numPages);
+      for (i = 0 ; i < numPages; i++) {  
+        var pageNum = i + 1;  
+        $('#nav').append ('<a href="#" rel="'+i+'">'+pageNum+'</a> ');  
+      }  
+      $('#data tbody tr').hide();  
+      $('#data tbody tr').slice (0, rowsShown).show();  
+      $('#nav a:first').addClass('active');  
+      $('#nav a').on('click', function() {  
+        $('#nav a').removeClass('active');  
+        $(this).addClass('active');  
+        var currPage = $(this).attr('rel');  
+        // console.log(currPage);
+        var startItem = currPage * rowsShown;  
+        var endItem = startItem + rowsShown;  
+        $('#data tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).  
+        css('display','table-row').animate({opacity:1}, 300);  
+       });     
+      }
+  });
