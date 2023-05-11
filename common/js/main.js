@@ -51,7 +51,7 @@ $(document).ready(function() {
       type: "GET",
       url: "https://63a56082318b23efa791bf88.mockapi.io/api/crud",
       success: function(data){
-          // console.log(idChange);          
+          console.log(data);          
           $.each(data, function( index, value ) {
             // console.log(value.id);
             if( idChange == value.id){
@@ -108,10 +108,10 @@ $(document).ready(function() {
     url: "https://63a56082318b23efa791bf88.mockapi.io/api/crud",
     success: function(data){
       renderData(data);
-      // console.log(data);      
+      console.log(data);      
     }
   });
-  //Render Data in web
+  //Render Data in web  
   function renderData(data){
     $.each(data, function( index, value ) {
     let dataShow = `
@@ -131,9 +131,9 @@ $(document).ready(function() {
     $('#data').after ('<div id="nav"></div>');  
       var rowsShown = 5;  
       var rowsTotal = $('#data tbody tr').length;  
-      console.log(rowsTotal)
+      // console.log(rowsTotal)
       var numPages = rowsTotal/rowsShown;  
-      console.log(numPages);
+      // console.log(numPages);
       for (i = 0 ; i < numPages; i++) {  
         var pageNum = i + 1;  
         $('#nav').append ('<a href="#" rel="'+i+'">'+pageNum+'</a> ');  
